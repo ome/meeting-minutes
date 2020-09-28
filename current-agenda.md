@@ -1,3 +1,4 @@
+[![hackmd-github-sync-badge](https://hackmd.io/PRWVuQqfQ5yci36B-qiHaQ/badge)](https://hackmd.io/PRWVuQqfQ5yci36B-qiHaQ)
 Attending:
 
 Start: 2:00 pm
