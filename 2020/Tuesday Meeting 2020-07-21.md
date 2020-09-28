@@ -1,0 +1,54 @@
+Attending: Simon, Frances, June, Seb, Will, Dom, Mark, Jason, Josh,
+Wilma, Melissa, David, Andreas, Erin Diel
+
+Start: 2:00 pm
+
+1. Accepting minutes from [<u>last meeting</u>](https://drive.google.com/open?id=0B9Xg53EhqUycZEVHclBwRHNFRGM)
+--------------------------------------------------------------------------------------------------------------
+
+2. Project Status
+-----------------
+
+(2-3 minutes each)
+
+-   IDR
+
+    -   Prod85 out tomorrow with 3 new studies.
+
+-   NGFF
+
+    -   Mark: Working on adding masks to OMERO Zarr microservice.
+
+-   SA
+
+    -   Demo upgraded. Learning/sls-gallery too
+
+    -   Nightshade 5.6.2 upgrade tomorrow morning
+
+    -   Can we delete {eel,octopus}.openmicroscopy.org ?
+
+        -   Turn off and see what breaks (after stand-up tomorrow)
+
+    -   Be aware no password expiry emails for Lifesci accounts
+
+-   Glencoe
+
+    -   Chris: Working on new file formats, looking at publicising
+        > analysis and storage requirements for sysadmins. Converting
+        > some existing plates to Zarr
+
+-   Community: −
+
+3. AOB
+------
+
+(5 min. max; tech. Discussion should be highlighted to relevant people
+and rescheduled)
+
+-   If you need access to UoD buildings talk to June first and get
+    > confirmation
+
+4. Main Topic
+-------------
+
+(20-25 minutes plus 15 minutes questions max)

@@ -1,0 +1,212 @@
+Attending: Jason, Josh, Petr, Wilma, J-m (Notes), Mark, Frances, June,
+Andreas, Dominik,
+
+> Talley Lambert, Simon, Kevin, Erin, Chris, Juna Nuñez-Iglesias,
+> Melissa
+
+Start: 2:00 pm
+
+1. Accepting minutes from [<u>last meeting</u>](https://drive.google.com/open?id=0B9Xg53EhqUycZEVHclBwRHNFRGM)
+--------------------------------------------------------------------------------------------------------------
+
+2. Project Status
+-----------------
+
+(2-3 minutes each)
+
+-   IDR
+
+    -   Preparing for next release:
+
+        -   Another covid dataset depending on time + 1 or 2 studies
+            > depending on testing
+
+-   NGFF
+
+    -   Masks status
+
+        -   [<u>Final
+            > PR</u>](https://github.com/ome/omero-ms-zarr/pull/60)
+            > opened for the first round of labeled images incl. Color
+            > support, etc.
+
+            -   On disk named as “masks”, name to be modified
+
+        -   No support for overlap or multiscales
+
+        -   In investigating multiscales, unsure what viewers are going
+            > to do
+
+    -   Masks future work
+
+        -   Likely to change name/folder from “masks” to “labels”
+
+        -   Add in multiscale
+
+        -   Extend colors specification
+
+        -   Support links to external data sources
+
+    -   Metadata (provenance, etc.) - repeat of [<u>last
+        > week</u>](https://docs.google.com/document/d/1HLpIUVJQrfH_km9D9ibqF2pFCrXS5yCS-bC9LjShpvQ/edit)
+
+        -   Location for storing “mask author” (ORCID, etc)
+
+            -   Provenance: who did what, using which tool/version
+
+        -   In terms of getting the JSON formatting correct, will also
+            > look at basic metadata:
+
+            -   Image name, physical pixel size
+
+            -   Dimension order, channel names,
+
+            -   Copyright information (IDR)
+
+    -   Napari feedback (Juan & Talley)
+
+        -   T: imaging what workflow pipelines might look like (in
+            > napari, etc.). Don’t have an internal metadata model.
+            > There’s just a dict where stuff can be dropped. No
+            > knowledge of dimensions. What happens if 2 separate nodes
+            > want to know something about a label? OME model would be a
+            > natural thing to standardize on. (Dimensionality)
+
+        -   J: hard-coding.
+
+            -   Example data to try out?
+
+        -   Josh: ask at regular intervals where the images are.
+
+        -   Juan: hierarchical model:
+
+            -   Josh: going in the direction of more hierarchies
+
+            -   Chris: balancing issue on filesystem
+
+            -   Mattias working on Zarr spec (czi grant): not sure if
+                > the current state could fix issues. Spec meeting on
+                > Friday
+
+        -   J-m: re: pipelines -- running headless? Talley: always
+            > headless first.
+
+            -   Juan: strong desire is that “napari headless is python”
+
+        -   J-m: re: pipelines -- any algorithms and what metadata they
+            > need?
+
+            -   Juan: all of scikit-image. They should be annotated with
+                > type information
+
+            -   Potentially something like an OME:Image type (but start
+                > simple)
+
+            -   I.e. know as much as possible about the image as
+                > possible but still work from raw arrays.
+
+            -   Talley: progressive enhancement. Start with dask plan,
+                > type & shape of array, and then identify algorithms.
+
+            -   J-m: how to determine the array for a filter in
+                > scikit-image.
+
+            -   Juan: should also be pure python (no GUI)
+
+            -   Chris: opencv guys have had image types for some time.
+                > I.e. *some* lite wrapping of arrays. Juan: type
+                > annotations rather than classes.
+
+-   [<u>Deep Copy</u>](https://github.com/ome/design/issues/20) (Josh &
+    > Mark)
+
+    -   Hybrid version which uses in-place like functionality to link
+        > (or if necessary copy) files in /Files as well as
+        > /ManagedRepository.
+
+    -   No database upgrade required.
+
+    -   Goal is to have working functionality before Mark leaves mid
+        > October.
+
+    -   Simon: anything under managedRepo is immutable? If so it should
+        > be fine to hardlink.
+
+        -   Hardlinking attachments which can be modified could be a
+            > problem (one file but two copies of metadata)
+
+    -   J-M: projection:
+
+        -   Duplicate of metadata might help to solve the metadata issue
+
+    -   Simon: copy vs symlink
+
+        -   Josh: decide where in the hierarchy where we can copy or
+            > symlink.
+
+    -   Petr: importance of documentation in terms of explanation
+
+    -   Deep copy issue:
+
+        -   Space
+
+        -   Time
+
+            -   Josh: metadata overhead implies that we might not gain
+                > much time
+
+    -   Symlink:
+
+        -   Petr: could be useful for publication and possible to
+            > explain
+
+        -   Publication workflow: locking file in “unix” sense to avoid
+            > deletion (cf. Thomas Zobel)
+
+    -   Delete:
+
+        -   Way to indicate what can be deleted, what is symlinked: no
+
+    -   Simon: annotation on the copied dataset so the user has a way to
+        > find out.
+
+-   SA:
+
+    -   eel/octopus still alive due to tied jenkins jobs
+
+-   Glencoe
+
+    -   Change from 5.6.1 custom build to be migrated to OS
+
+    -   Melissa: issue with processed data generating non normalized
+        > floating data in Tiff
+
+        -   Zoom level scaling not testing. Iviewer not using it, it is
+            > doing its own stuff
+
+        -   Few more steps to do
+
+        -   Existing Doc to be improved
+
+-   Community
+
+    -   Shutting down help.o.org -&gt; redirecting to guide
+
+    -   Pdf will still be available under
+        > [<u>https://downloads.openmicroscopy.org/help/</u>](https://downloads.openmicroscopy.org/help/)
+
+    -   Jason:
+
+        -   Community meeting output:
+
+            -   Start global discussion on different issues. Jason will
+                > start to organise things while taking time off away
+                > from zoom.
+
+        -   Ome face masks coming out soon
+
+3. AOB
+------
+
+(5 min. max; tech. Discussion should be highlighted to relevant people
+and rescheduled)

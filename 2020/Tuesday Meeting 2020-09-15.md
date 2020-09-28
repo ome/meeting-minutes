@@ -1,0 +1,147 @@
+Attending: Petr, Josh, Simon, Frances, J-m, June, Mark, Seb, Melissa,
+David, =10
+
+Kevin, Wilma, Chris, Will, Jason, Emil, Erin, Ola
+
+Start: 2:00 pm
+
+1. Accepting minutes from [<u>last meeting</u>](https://drive.google.com/open?id=0B9Xg53EhqUycZEVHclBwRHNFRGM)
+--------------------------------------------------------------------------------------------------------------
+
+2. Project Status
+-----------------
+
+(2-3 minutes each)
+
+-   IDR:
+
+    -   Release planned for end of month.
+
+        -   1 screen in and ready
+
+        -   2 more studies planned. Both in progress: idr0089 and
+            > idr0094 (big covid screen)
+
+        -   Some data missing from idr0094. Lots of compounds handling.
+
+        -   Using [<u>PubChem</u>](https://pubchem.ncbi.nlm.nih.gov/)
+            > identifiers as standard. Some cleanup needed after
+            > publication
+
+        -   First submission using OME-TIFF for HCS data. Bigger example
+            > to follow…
+
+        -   Lots of challenges with e.g. 1TB of data.
+
+        -   Jason: idr0094 - first phenotypic screen of covid infection
+            > in Human cells with drugs.
+
+        -   Chemical annotation is challenging. Commercial compound
+            > library.
+
+        -   EMBL (ChEMBL?) also involved
+
+        -   JM: we are encouraged to use this open data for training
+
+        -   Seb: see also
+            > [<u>https://www.ebi.ac.uk/unichem/</u>](https://www.ebi.ac.uk/unichem/)
+
+-   NGFF
+
+    -   S3 status:
+
+        -   CORS- fixed thanks to Simon - proxy server
+            > idr-s3.openmicroscopy.org
+
+            -   [<u>Vivesse</u>](https://hms-dbmi.github.io/vizarr?source=https%3A%2F%2Fidr-s3.openmicroscopy.org%2Fidr%2Fzarr%2Fv0.1%2F9822151.zarr):
+                > +1,
+                > [<u>neuroglancer</u>](https://neuroglancer-demo.appspot.com/#!%7B%22dimensions%22:%7B%22x%22:%5B1%2C%22%22%5D%2C%22y%22:%5B1%2C%22%22%5D%2C%22z%22:%5B1%2C%22%22%5D%2C%22c%22:%5B1%2C%22%22%5D%2C%22t%22:%5B1%2C%22%22%5D%7D%2C%22position%22:%5B120.38370513916016%2C144.28720092773438%2C120.5%2C0.5%2C0.5%5D%2C%22crossSectionScale%22:0.5220927770163193%2C%22projectionOrientation%22:%5B-0.024500180035829544%2C-0.42064404487609863%2C-0.00928647443652153%2C0.906847357749939%5D%2C%22projectionScale%22:551.2009490847719%2C%22layers%22:%5B%7B%22type%22:%22image%22%2C%22source%22:%7B%22url%22:%22zarr://https://idr-s3.openmicroscopy.org/idr/outreach/55204.zarr/%22%2C%22transform%22:%7B%22matrix%22:%5B%5B0%2C0%2C0%2C0%2C1%2C0%5D%2C%5B0%2C0%2C0%2C1%2C0%2C0%5D%2C%5B0%2C0%2C1%2C0%2C0%2C0%5D%2C%5B0%2C1%2C0%2C0%2C0%2C0%5D%2C%5B1%2C0%2C0%2C0%2C0%2C0%5D%5D%2C%22outputDimensions%22:%7B%22x%22:%5B1%2C%22%22%5D%2C%22y%22:%5B1%2C%22%22%5D%2C%22z%22:%5B1%2C%22%22%5D%2C%22c%22:%5B1%2C%22%22%5D%2C%22t%22:%5B1%2C%22%22%5D%7D%7D%7D%2C%22shader%22:%22#uicontrol%20vec3%20color%20color%28default=%5C%22white%5C%22%29%5Cn#uicontrol%20float%20min%20slider%28min=0%2C%20max=1.0%2C%20default=1.0%29%5Cn#uicontrol%20float%20max%20slider%28min=0%2C%20max=1.0%2C%20default=1.0%29%5Cn%5Cnfloat%20scale%28float%20x%29%20%7B%5Cn%20%20return%20%28x%20-%20min%29%20/%20%28max%20-%20min%29%3B%5Cn%7D%5Cnvoid%20main%28%29%20%7B%5Cn%20%20emitRGB%28%5Cn%20%20%20%20color%20%2A%20vec3%28%5Cn%20%20%20%20%20%20scale%28toNormalized%28getDataValue%28%29%29%29%2C%5Cn%20%20%20%20%20%20scale%28toNormalized%28getDataValue%28%29%29%29%2C%5Cn%20%20%20%20%20%20scale%28toNormalized%28getDataValue%28%29%29%29%5Cn%20%20%20%20%29%5Cn%20%20%29%3B%5Cn%7D%22%2C%22shaderControls%22:%7B%22min%22:0%2C%22max%22:0.04%7D%2C%22name%22:%2255204.zarr%22%7D%5D%2C%22selectedLayer%22:%7B%22layer%22:%2255204.zarr%22%2C%22size%22:697%7D%2C%22layout%22:%224panel%22%7D):
+                > unknown
+
+            -   Nginx adding headers for all responses, including
+                > errors.
+
+        -   FIRE (production s3) - no change.
+
+    -   Spec status: merged, uploaded data, one bug, then issue
+
+        -   Versioning issue
+
+        -   Bug in public access
+
+        -   Do we transform all masks into new spec before getting
+            > feedback from community?
+
+        -   May create sub-directory of data in different versions
+
+    -   EMBL Heidelberg call - after global bio-imaging meeting
+
+        -   Imaris writer.
+
+        -   Tags, calls, etc.
+
+        -   HDF5
+
+        -   Ilastik also compatible format. Dominic Kutra
+
+        -   Emil: Use Ilastik for segmentation, CellProfiler for feature
+            > extraction.
+
+-   OMERO 5
+
+    -   \[Simon\] OMERO.py: [<u>One PR
+        > remaining</u>](https://github.com/ome/omero-py/pull/251),
+        > 5.8.0 release tomorrow?
+
+    -   Will merge after this meeting.
+
+    -   Release along with omero-web.
+
+    -   OMERO deep-copy PR ready to merge.
+
+    -   Good to merge. Error message improvement can be follow-up.
+
+    -   CLI allows various options for different workflows.
+
+    -   Needs good docs for CLI and UI work to expose optimal workflows
+        > in webclient.
+
+    -   Seb: announce py/web with duplicate server release?
+
+    -   Josh: yes, but don’t delay releases
+
+-   SA
+
+    -   Okay to have UoD-IT [<u>decommission
+        > necromancer</u>](https://github.com/openmicroscopy/management_tools/issues/1266)?
+
+    -   Josh: users.openmicroscopy.org.uk
+        > [<u>http://users.openmicroscopy.org.uk/\~wmoore</u>](http://users.openmicroscopy.org.uk/~wmoore)
+
+-   Glencoe Chris:
+
+    -   TileDB and zarr work ongoing.
+
+    -   Looking at tools for spatial indexing from Geo-spatial community
+
+    -   re: Pete Bankhead /Qupath. GeoIs, Shapely (python).
+
+    -   Need to store large amounts of shapes and query by coordinates.
+
+-   Community
+
+    -   [<u>Code of
+        > Conduct</u>](https://docs.google.com/document/d/1bYa82C7ZN3z9bHGzFzCeeru2CS__yeTGeBBsenOoBv4/edit#)
+
+3. AOB
+------
+
+(5 min. max; tech. Discussion should be highlighted to relevant people
+and rescheduled)
+
+-   Returning to the OME Fishbowl
+
+4. Main Topic
+-------------
+
+(20-25 minutes plus 15 minutes questions max)

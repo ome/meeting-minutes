@@ -1,0 +1,942 @@
+Attending: Josh (notes), Petr, Frances, June, Jason, Mark, Chris, Dom,
+Kevin, Simon, Seb, David,
+
+Melissa,
+
+Start: 2:00 pm
+
+1. Accepting minutes from [<u>last meeting</u>](https://drive.google.com/open?id=0B9Xg53EhqUycZEVHclBwRHNFRGM)
+--------------------------------------------------------------------------------------------------------------
+
+-   Accepted: yes
+
+2. Project Status
+-----------------
+
+(2-3 minutes each)
+
+-   IDR
+
+    -   Simon: New dataset testing infrastructure being tested, a cut
+        > down test IDR can be created for testing individual datasets
+
+        -   Naming discussion
+
+        -   No longer need to go to idr-testing (no import conflicts,
+            > etc.)
+
+        -   Requires SSH tunnel
+
+        -   Objections to “idr-pilot”?
+
+-   NGFF
+
+    -   Monash interest in mirroring NGFF datasets
+
+        -   Jason: for use on national research cloud (Nectar)
+
+        -   Cf. RIKEN & US
+
+        -   Global partners page
+
+    -   [<u>Masks</u>](https://github.com/orgs/ome/projects/10): General
+        > status
+
+        -   Stabilizing ome-zarr-py (tests, etc.)
+
+        -   omero-ms-zarr approaching parity. Overlap issue (Mark)
+
+        -   Ignoring multiscale in the transformations, could likely
+            > draw a line under it.
+
+            -   Chris: will need the multiscales.
+
+        -   Next step currently would be to allow *adding* masks (see
+            > provenance below)
+
+    -   bioschemas.org [<u>community
+        > meeting</u>](https://docs.google.com/document/d/1kd5F97ogdiPNhLTnkei-RVR8TC8Ohpc5QSPX3KsfDrk/edit?pli=1#)
+
+        -   Interested in having datasets marked up with
+            > [<u>Gene</u>](https://bioschemas.org/profiles/Gene/0.7-RELEASE/)
+
+        -   Simon: ok for mapr, but the ?show= … pages won’t work great
+            > (images, datasets)
+
+        -   Chris: extension of the gallery pages?
+
+        -   Seb: likely. gallery is what we’re promoting
+
+        -   Josh: need a sitemap
+
+-   SA (14:15)
+
+    -   N/A
+
+-   Glencoe
+
+    -   Last week was GlencoeCon.
+
+    -   Trying to get N5 to read Zarr on S3 (with imglib2...)
+
+        -   Looking into composition, but can reimplement if need be.
+
+        -   Note: n5 is currently not using multipart uploads
+
+-   Community
+
+3. AOB
+------
+
+(5 min. max; tech. Discussion should be highlighted to relevant people
+and rescheduled)
+
+-   JRS: putting together Codes of Conduct, Diversity Statements,
+    > Governance for further grant applications. Deadline of Aug. 4th.
+
+    -   Will make use of the UoD base documents.
+
+-   Masks ordered!
+
+4. Main Topic
+-------------
+
+(20-25 minutes plus 15 minutes questions max)
+
+-   [<u>Provenance</u>](https://github.com/orgs/ome/projects/11) project
+    > board
+
+    -   Metadata to work on:
+
+        -   Mask author
+
+        -   Image name, physical pixel size
+
+        -   Dimension Orders (when/if we support other array layouts)
+
+        -   Chris: Channel names
+
+        -   Petr: what was the original one? (Doable via the date)
+
+    -   General plan to try JSON-LD
+
+        -   Existing standards:
+            > [<u>https://www.w3.org/TR/prov-overview/</u>](https://www.w3.org/TR/prov-overview/)
+            > (Link to BBMRI)
+
+        -   With existing identifiers (orcid)
+
+        -   And trying to make it usable with
+            > [<u>Framing</u>](https://www.w3.org/TR/json-ld11-framing/),
+            > etc.
+
+    -   Examples (below)
+
+        -   [<u>Flight markup from gmail</u>](#kix.xkqlh7e5b7dr)
+
+        -   [<u>Fake example</u>](#2yedp8u2kth)
+
+        -   [<u>Current difficulty of size</u>](#7oslterkgyhf)
+
+        -   [<u>omero-marshal example</u>](#weqiqbdudk3f)
+
+        -   [<u>Provenance example</u>](#b8xikqg8x6li)
+
+    -   Open questions
+
+        -   Do we use “implicit contexts”?
+
+        -   How much extra is too much?
+
+    -   Cf. relationship to (bio)schemas.org ([<u>community
+        > meeting</u>](https://docs.google.com/document/d/1kd5F97ogdiPNhLTnkei-RVR8TC8Ohpc5QSPX3KsfDrk/edit?pli=1#))
+
+        -   [<u>http://metadataplus.biothings.io/about</u>](http://metadataplus.biothings.io/about)
+
+        -   [<u>http://crawler.biothings.io</u>](http://crawler.biothings.io)
+
+        -   [<u>https://discovery.biothings.io/schema-playground</u>](https://discovery.biothings.io/schema-playground)
+
+    -   Notes:
+
+        -   JRS: re: usability -- there will be translators from
+            > spreadsheets
+
+        -   Petr: cf. downloader in that the XML files are independent
+            > of one anothe
+
+        -   Mark: what will provenance will be used for?
+
+            -   Analysis run of workflow
+
+            -   OMERO EventLog
+
+            -   Some competitor
+
+            -   “Reproducibility”?
+
+            -   Making a statement of what I did
+
+        -   Chris: spirit of the technology is that someone can add the
+            > markup (as opposed to adding to our core)
+
+        -   Chris: Tenson of tooling. Mark: making use of the existing
+            > tooling.
+
+        -   Chris: recording the updates to the file … in the file
+
+Flight markup from gmail
+
+https://developers.google.com/gmail/markup/reference/flight-reservation
+
+&lt;script type="application/ld+json"&gt;
+
+{
+
+"@context": "http://schema.org",
+
+"@type": "FlightReservation"
+
+"reservationNumber": "RXJ34P",
+
+"reservationStatus": "http://schema.org/Confirmed",
+
+"underName": {
+
+"@type": "Person",
+
+"name": "Eva Green"
+
+},
+
+"reservationFor": {
+
+"@type": "Flight",
+
+"flightNumber": "110",
+
+"airline": {
+
+"@type": "Airline",
+
+"name": "United",
+
+"iataCode": "UA"
+
+},
+
+"departureAirport": {
+
+"@type": "Airport",
+
+"name": "San Francisco Airport",
+
+"iataCode": "SFO"
+
+},
+
+"departureTime": "2027-03-04T20:15:00-08:00",
+
+"arrivalAirport": {
+
+"@type": "Airport",
+
+"name": "John F. Kennedy International Airport",
+
+"iataCode": "JFK"
+
+},
+
+"arrivalTime": "2027-03-05T06:30:00-05:00"
+
+}
+
+}
+
+&lt;/script&gt;
+
+Fake example
+
+> {
+>
+> "@context": \[
+>
+> “../../../.zattrs”
+>
+> "[<u>https://openmicroscopy.org/json-ld/v1/image.jsonld</u>](https://openmicroscopy.org/json-ld/image.jsonld)",
+>
+> "[<u>https://openmicroscopy.org/json-ld/v1/masks.jsonld</u>](https://openmicroscopy.org/json-ld/image.jsonld)"
+>
+> \],
+>
+> "@id": "https://idr.openmicroscopy.org/image/1",
+>
+> "@type": "ome:image",
+>
+> **"name"**: "Example",
+>
+> **"dimensions"**: \[“x”, “y”, “z”, “c”, “t”\]
+>
+> }
+
+Current difficulty of complexity/verbosity
+
+See
+[<u>https://gitlab.com/openmicroscopy/incubator/ome-owl/-/tree/master/ontology/RDF/JSON-LD/2016-06/sample</u>](https://gitlab.com/openmicroscopy/incubator/ome-owl/-/tree/master/ontology/RDF/JSON-LD/2016-06/sample)
+
+"http://www.openmicroscopy.org/rdf/2016-06/ome\_core/physicalSizeX": {
+
+"@id": "\_:b5",
+
+"@type": "PATO:0000117",
+
+"http://qudt.org/schema/qudt/unit": {
+
+"@id":
+"http://www.openmicroscopy.org/rdf/2016-06/ome\_core/Unit/UnitLength\#um",
+
+"@type": "http://www.w3.org/2000/01/rdf-schema\#Class"
+
+},
+
+"http://www.w3.org/1999/02/22-rdf-syntax-ns\#value": {
+
+"@type": "http://www.w3.org/2001/XMLSchema\#float",
+
+"@value": "100000.0"
+
+}
+
+},
+
+Versus
+
+"physicalSizeX" : {
+
+"@type" : "PATO:0000117",
+
+"unit" : "unitLength:um",
+
+"value" : {
+
+"@type" : "xsd:float",
+
+"@value" : "100000.0"
+
+}
+
+},
+
+omero-marshal example
+
+See
+[<u>https://github.com/ome/omero-marshal/blob/master/tests/unit/test\_image\_pixels\_encoder.py</u>](https://github.com/ome/omero-marshal/blob/master/tests/unit/test_image_pixels_encoder.py)
+
+'@id': 1,
+
+'@type': '%s\#Image' % OME\_SCHEMA\_URL,
+
+'AcquisitionDate': 1,
+
+'Name': 'image\_name\_1',
+
+'omero:archived': False,
+
+'Description': 'image\_description\_1',
+
+'omero:partial': False,
+
+'omero:series': 0,
+
+'omero:format': {
+
+'@id': 1,
+
+'@type': 'TBD\#Format',
+
+'value': 'PNG',
+
+'omero:details': {'@type': 'TBD\#Details'},
+
+},
+
+'Pixels': {
+
+'@id': 1,
+
+'@type': '%s\#Pixels' % OME\_SCHEMA\_URL,
+
+'omero:methodology': 'methodology',
+
+'PhysicalSizeX': {
+
+'@type': 'TBD\#LengthI',
+
+'Unit': 'MICROMETER',
+
+'Symbol': 'µm',
+
+'Value': 1.0
+
+},
+
+'PhysicalSizeY': {
+
+'@type': 'TBD\#LengthI',
+
+'Unit': 'MICROMETER',
+
+'Symbol': 'µm',
+
+'Value': 2.0
+
+},
+
+'PhysicalSizeZ': {
+
+'@type': 'TBD\#LengthI',
+
+'Unit': 'MICROMETER',
+
+'Symbol': 'µm',
+
+'Value': 3.0
+
+},
+
+'omero:sha1': '61ee8b5601a84d5154387578466c8998848ba089',
+
+'SignificantBits': 16,
+
+'SizeX': 1,
+
+'SizeY': 2,
+
+'SizeZ': 3,
+
+'SizeC': 4,
+
+'SizeT': 5,
+
+'TimeIncrement': {
+
+'@type': 'TBD\#TimeI',
+
+'Unit': 'MILLISECOND',
+
+'Symbol': 'ms',
+
+'Value': 1.0
+
+},
+
+'omero:waveIncrement': 2.0,
+
+'omero:waveStart': 1,
+
+'DimensionOrder': {
+
+'@id': 1,
+
+'@type': 'TBD\#DimensionOrder',
+
+'value': 'XYZCT',
+
+'omero:details': {'@type': 'TBD\#Details'}
+
+},
+
+'Type': {
+
+'@id': 1,
+
+'@type': 'TBD\#PixelsType',
+
+'value': 'bit',
+
+'omero:details': {'@type': 'TBD\#Details'}
+
+},
+
+'Channels': \[{
+
+'@id': 1,
+
+'@type': '%s\#Channel' % OME\_SCHEMA\_URL,
+
+'AcquisitionMode': {
+
+'@id': 1,
+
+'@type': 'TBD\#AcquisitionMode',
+
+'omero:details': {'@type': 'TBD\#Details'},
+
+'value': 'WideField'
+
+},
+
+'Color': -1,
+
+'ContrastMethod': {
+
+'@id': 8,
+
+'@type': 'TBD\#ContrastMethod',
+
+'omero:details': {'@type': 'TBD\#Details'},
+
+'value': 'Fluorescence'
+
+},
+
+'EmissionWavelength': {
+
+'@type': 'TBD\#LengthI',
+
+'Symbol': 'nm',
+
+'Unit': 'NANOMETER',
+
+'Value': 509.0
+
+},
+
+'ExcitationWavelength': {
+
+'@type': 'TBD\#LengthI',
+
+'Symbol': 'nm',
+
+'Unit': 'NANOMETER',
+
+'Value': 488.0
+
+},
+
+'Fluor': 'GFP',
+
+'Illumination': {
+
+'@id': 1,
+
+'@type': 'TBD\#Illumination',
+
+'omero:details': {'@type': 'TBD\#Details'},
+
+'value': 'Transmitted'
+
+},
+
+'NDFilter': 1.0,
+
+'Name': 'GFP/488',
+
+'PinholeSize': {
+
+'@type': 'TBD\#LengthI',
+
+'Symbol': 'nm',
+
+'Unit': 'NANOMETER',
+
+'Value': 1.0
+
+},
+
+'PockelCellSetting': 0,
+
+'SamplesPerPixel': 2,
+
+'omero:LogicalChannelId': 1,
+
+'omero:details': {'@type': 'TBD\#Details'},
+
+'omero:lookupTable': 'rainbow',
+
+'omero:photometricInterpretation': {
+
+'@id': 1,
+
+'@type': 'TBD\#PhotometricInterpretation',
+
+'omero:details': {'@type': 'TBD\#Details'},
+
+'value': 'RGB'
+
+}
+
+}
+
+Provenance example
+
+\[
+
+{
+
+"@id" : ":labeled\_image\_123",
+
+"@type" : "prov:Entity", // subclass prov:Entity?
+
+"qualifiedDerivation" : {
+
+> "@type" : "prov:Derivation",
+>
+> "entity" : ":source\_image",
+>
+> "hadActivity" : ":label\_creation"
+
+}
+
+"wasDerivedFrom" : ":source\_image"
+
+}, {
+
+"@id" : ":label\_creation",
+
+"@type" : "prov:Activity",
+
+"startedAtTime" : "2020-07-16T01:52:02Z",
+
+"endedAtTime" : "2020-07-16T03:00:02Z",
+
+"wasAssociatedWith" :
+"[<u>https://orcid.org/0000-0003-4028-811X</u>](https://orcid.org/0000-0003-4028-811X)"
+// Josh
+
+}
+
+\]
+
+[<u>https://www.w3.org/TR/prov-o/</u>](https://www.w3.org/TR/prov-o/)
+
+{
+
+"@graph" : \[ {
+
+"@id" : "http://cultura.linkeddata.es/BNE/resource/C1001/XX2197892",
+
+"@type" : \[ "frbr:Work", "prov:Entity" \],
+
+"language" : "lang:spa",
+
+"wasAttributedTo" : ":cervantes"
+
+}, {
+
+"@id" : ":cervantes",
+
+"@type" : "prov:Person",
+
+"name" : "Miguel de Cervantes"
+
+}, {
+
+"@id" : ":ormsby",
+
+"@type" : "prov:Person",
+
+"name" : "John Ormsby"
+
+}, {
+
+"@id" : "http://www.gutenberg.org/ebooks/996",
+
+"@type" : \[ "frbr:Work", "prov:Entity" \],
+
+"language" : "lang:eng",
+
+"title" : "Don Quixote",
+
+"hadPrimarySource" :
+"http://cultura.linkeddata.es/BNE/resource/C1001/XX2197892",
+
+"wasAttributedTo" : ":ormsby"
+
+} \],
+
+"@id" : "urn:x-arq:DefaultGraphNode",
+
+"@context" : {
+
+"name" : "http://xmlns.com/foaf/0.1/name",
+
+"hadPrimarySource" : {
+
+"@id" : "http://www.w3.org/ns/prov\#hadPrimarySource",
+
+"@type" : "@id"
+
+},
+
+"language" : {
+
+"@id" : "http://purl.org/dc/terms/language",
+
+"@type" : "@id"
+
+},
+
+"wasAttributedTo" : {
+
+"@id" : "http://www.w3.org/ns/prov\#wasAttributedTo",
+
+"@type" : "@id"
+
+},
+
+"title" : "http://purl.org/dc/terms/title",
+
+"@base" : "http://example.com/",
+
+"" : "http://example.com/",
+
+"owl" : "http://www.w3.org/2002/07/owl\#",
+
+"xsd" : "http://www.w3.org/2001/XMLSchema\#",
+
+"dcterms" : "http://purl.org/dc/terms/",
+
+"rdfs" : "http://www.w3.org/2000/01/rdf-schema\#",
+
+"lang" : "http://lexvo.org/id/iso639-3/",
+
+"frbr" : "http://purl.org/vocab/frbr/core\#",
+
+"prov" : "http://www.w3.org/ns/prov\#",
+
+"foaf" : "http://xmlns.com/foaf/0.1/"
+
+}
+
+}
+
+https://www.w3.org/TR/2013/REC-prov-o-20130430/\#narrative-example-qualified-5
+
+{
+
+"@graph" : \[
+
+> {
+>
+> "@id" : "\_:b0",
+>
+> "@type" : "prov:Generation",
+>
+> "activity" : ":illustrationActivity",
+>
+> "atTime" : "2011-07-14T15:52:14Z"
+>
+> }, {
+>
+> "@id" : ":bar\_chart",
+>
+> "@type" : "prov:Entity",
+>
+> "qualifiedGeneration" : "\_:b0",
+>
+> "wasGeneratedBy" : ":illustrationActivity"
+>
+> }, {
+>
+> "@id" : ":illustrationActivity",
+>
+> "@type" : "prov:Activity"
+>
+> }
+
+\],
+
+"@context" : {
+
+"qualifiedGeneration" : {
+
+"@id" : "http://www.w3.org/ns/prov\#qualifiedGeneration",
+
+"@type" : "@id"
+
+},
+
+"wasGeneratedBy" : {
+
+"@id" : "http://www.w3.org/ns/prov\#wasGeneratedBy",
+
+"@type" : "@id"
+
+},
+
+"atTime" : {
+
+"@id" : "http://www.w3.org/ns/prov\#atTime",
+
+"@type" : "http://www.w3.org/2001/XMLSchema\#dateTime"
+
+},
+
+"activity" : {
+
+"@id" : "http://www.w3.org/ns/prov\#activity",
+
+"@type" : "@id"
+
+},
+
+"@base" : "http://example.org\#",
+
+"" : "http://example.org\#",
+
+"xsd" : "http://www.w3.org/2001/XMLSchema\#",
+
+"prov" : "http://www.w3.org/ns/prov\#"
+
+}
+
+}
+
+[<u>https://www.w3.org/TR/prov-o/\#qualifiedGeneration</u>](https://www.w3.org/TR/prov-o/#qualifiedGeneration)
+
+{
+
+"@graph" : \[ {
+
+"@id" : "\_:b0",
+
+"@type" : "prov:Derivation",
+
+"entity" : ":aggregatedByRegions",
+
+"hadActivity" : ":chart\_creation",
+
+"hadGeneration" : ":chat\_plotting"
+
+}, {
+
+"@id" : ":bar\_chart",
+
+"@type" : "prov:Entity",
+
+"qualifiedDerivation" : "\_:b0",
+
+"wasDerivedFrom" : ":aggregatedByRegions"
+
+}, {
+
+"@id" : ":chart\_creation",
+
+"@type" : "prov:Activity",
+
+"endedAtTime" : "2011-07-16T03:00:02Z",
+
+"startedAtTime" : "2011-07-16T01:52:02Z",
+
+"wasAssociatedWith" : ":derek"
+
+}, {
+
+"@id" : ":chat\_plotting",
+
+"@type" : "prov:Generation",
+
+"atTime" : "2011-07-16T03:00:02Z"
+
+} \],
+
+"@id" : "urn:x-arq:DefaultGraphNode",
+
+"@context" : {
+
+"hadActivity" : {
+
+"@id" : "http://www.w3.org/ns/prov\#hadActivity",
+
+"@type" : "@id"
+
+},
+
+"hadGeneration" : {
+
+"@id" : "http://www.w3.org/ns/prov\#hadGeneration",
+
+"@type" : "@id"
+
+},
+
+"entity" : {
+
+"@id" : "http://www.w3.org/ns/prov\#entity",
+
+"@type" : "@id"
+
+},
+
+"endedAtTime" : {
+
+"@id" : "http://www.w3.org/ns/prov\#endedAtTime",
+
+"@type" : "http://www.w3.org/2001/XMLSchema\#dateTime"
+
+},
+
+"startedAtTime" : {
+
+"@id" : "http://www.w3.org/ns/prov\#startedAtTime",
+
+"@type" : "http://www.w3.org/2001/XMLSchema\#dateTime"
+
+},
+
+"wasAssociatedWith" : {
+
+"@id" : "http://www.w3.org/ns/prov\#wasAssociatedWith",
+
+"@type" : "@id"
+
+},
+
+"qualifiedDerivation" : {
+
+"@id" : "http://www.w3.org/ns/prov\#qualifiedDerivation",
+
+"@type" : "@id"
+
+},
+
+"wasDerivedFrom" : {
+
+"@id" : "http://www.w3.org/ns/prov\#wasDerivedFrom",
+
+"@type" : "@id"
+
+},
+
+"atTime" : {
+
+"@id" : "http://www.w3.org/ns/prov\#atTime",
+
+"@type" : "http://www.w3.org/2001/XMLSchema\#dateTime"
+
+},
+
+"@base" : "http://example.com/",
+
+"" : "http://example.com/",
+
+"owl" : "http://www.w3.org/2002/07/owl\#",
+
+"xsd" : "http://www.w3.org/2001/XMLSchema\#",
+
+"rdfs" : "http://www.w3.org/2000/01/rdf-schema\#",
+
+"prov" : "http://www.w3.org/ns/prov\#"
+
+}
+
+}
+
+Other prov links:
+
+-   [<u>https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0025513</u>](https://journals.plos.org/plosone/article?id=10.1371/journal.pone.0025513)
+
+-   [<u>http://seismicdata.github.io/SEIS-PROV/\_generated\_usage\_examples.html</u>](http://seismicdata.github.io/SEIS-PROV/_generated_usage_examples.html)
+
+-   [<u>https://www.sciencedirect.com/science/article/pii/S0198971517300558</u>](https://www.sciencedirect.com/science/article/pii/S0198971517300558)

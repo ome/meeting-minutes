@@ -1,0 +1,217 @@
+Attending: Mark, Josh, Seb, Petr, Frances, David, Simon, Andreas, June,
+(9)
+
+Will, Melissa, J-m, Jason, Kevin, Chris,
+
+Start: 2:00 pm
+
+1. Accepting minutes from [<u>last meeting</u>](https://drive.google.com/open?id=0B9Xg53EhqUycZEVHclBwRHNFRGM)
+--------------------------------------------------------------------------------------------------------------
+
+2. Project Status
+-----------------
+
+(2-3 minutes each)
+
+-   IDR
+
+    -   Migration is complete!
+
+    -   Next release: prod84 (idr0071, idr0077, idr0079).
+
+        -   Starting to load idr0077 in the next server
+
+    -   Timeline for S3 storage? End of June
+
+-   SA (learning/mail)
+
+    -   Mark: I will create a couple of Google Groups at omexml.org for
+        > testing.
+
+        -   Could be new groups corresponding to legacy mail aliases or
+            > mailman lists with same list name and subscribers. Any
+            > preferences as to which lists? Or I'll probably pick an
+            > alias one and a mailman one. Also happy to adjust
+            > subscribers according to who does or does not want to be
+            > part of the testing. Good to include someone with non-UoD
+            > address, could add personal ones.
+
+        -   Also happy to create any lists for current discussions,
+            > e.g., NGFF, to see how that goes as a test, or simply some
+            > test list that we intend to throw away once done.
+
+        -   My planned default is to create groups where:
+
+            -   anyone can post but mail from non-members is held for
+                > moderation
+
+            -   old posts are archived but visible to members only.
+
+        -   Final migration could be done fairly quickly once “go ahead”
+
+        -   Feedback on list names by EOB today - can then start testing
+
+        -   Jason: just go ahead by end of week
+
+-   Glencoe (Chris):
+
+    -   Progress on NGFF - moving to Java
+
+    -   Omero-roi-tool updates yesterday for QuPath guides workflows
+
+    -   OME-TIFF PRs - BioQuant is new ‘commercial partner’ creating
+        > OME-TIFFs
+
+-   Community
+
+    -   iRODS User Group Meeting (Josh attended)
+
+        -   Link collection
+
+            -   CyVerse -
+                > [<u>http://cyverse.org</u>](http://cyverse.org)
+
+                -   E.g. [<u>Continuous
+                    > Analysis</u>](https://gitlab.com/cyverse/nafigos)
+                    > (K8S), [<u>ansible
+                    > playbooks/modules</u>](https://github.com/cyverse/ds-playbooks/tree/master/irods/library),
+                    > [<u>"subspace"</u>](https://github.com/cyverse/subspace)
+
+            -   [<u>Yoda</u>](https://irods.org/uploads/2018/Smeele-UtrechtUni-Yoda-paper.pdf)
+                > (Utrecht) -
+                > [<u>https://utrechtuniversity.github.io/yoda/</u>](https://utrechtuniversity.github.io/yoda/)
+
+            -   Metadata: [<u>json-ld
+                > converters</u>](https://pypi.org/project/irods-avu-json/)
+                > (cf.
+                > [<u>Paul</u>](https://irods.org/uploads/2019/vanSchayck-Maastricht-JSON2AVU-slides.pdf)
+                > Van S. OMERO user), [<u>netcdf
+                > parsing</u>](https://github.com/d-w-moore/extract_netcdf_header_msvc)
+
+            -   [<u>https://github.com/irods/irods\_demo</u>](https://github.com/irods/irods_demo)
+                > (docker-compose)
+
+            -   [<u>https://github.com/irods/irods\_testing\_jenkins/tree/master/irods\_docker\_files</u>](https://github.com/irods/irods_testing_jenkins/tree/master/irods_docker_files)
+
+            -   [<u>https://github.com/irods/irods\_resource\_plugin\_s3</u>](https://github.com/irods/irods_resource_plugin_s3)
+
+            -   [<u>Hard
+                > links</u>](https://github.com/irods/irods_demo),
+                > [<u>idrop
+                > (uploader)</u>](https://github.com/irods-contrib/idrop)
+
+            -   [<u>NIH</u>](https://datascience.nih.gov/strides)
+                > [<u>GA4GH</u>](https://github.com/michael-conway/irods-ga4gh-dos)
+                > etc
+
+        -   Best usage of iRODS for OMERO would be e.g replacement of
+            > OMERO.dropbox
+
+            -   Also useful for search
+
+        -   But don’t want to make OMERO depend on iRODs (install
+            > complexity)
+
+    -   OME Meeting [<u>Survey
+        > Responses</u>](https://docs.google.com/forms/d/1Kaf-kE-KHrtNvr0gHqPS_ukvpJ8fjmNKiVnJCJZk5GI/edit#responses)
+
+        -   Useful for discussions of future meetings
+
+3. AOB
+------
+
+(5 min. max; tech. Discussion should be highlighted to relevant people
+and rescheduled)
+
+4. Main Topic
+-------------
+
+(20-25 minutes plus 15 minutes questions max)
+
+NGFF
+
+-   Recap of [<u>yesterday's
+    > call</u>](https://docs.google.com/document/d/1kCTxl9LpuDjDoF4hXayahbAkR8aM2IfTbXunOCE-tJc/edit#heading=h.ug8trrnvgcof)
+
+-   Strawman
+    > [<u>roadmap</u>](https://docs.google.com/document/d/1eY_ZajjFLUbylY-KjVqEH3FR-gWqyRImp73HYpMZZIM/edit#)
+
+-   Any feedback from the team?
+
+    -   Mark: two classes of use case. IDR case where data is available
+        > and prepared. For OMERO 6, permissions become more important.
+        > Brings questions about types of operations users would like to
+        > do (deleting images…)
+
+        -   Josh: could be broken down e.g. IDR metadata, binary
+            > oriented question (ROIs, multimodal). See
+            > [<u>https://docs.google.com/document/d/1eY\_ZajjFLUbylY-KjVqEH3FR-gWqyRImp73HYpMZZIM/edit</u>](https://docs.google.com/document/d/1eY_ZajjFLUbylY-KjVqEH3FR-gWqyRImp73HYpMZZIM/edit)
+            > for preliminary list of buckets
+
+    -   Chris: primary goal is have the option to read from Zarr either
+        > on disk or from object store in current architecture. Easiest
+        > place is on micro-service side
+
+        -   Single place where micro-service relies on server:
+            > thumbnailing micro-service. First candidate.
+
+        -   Primary problem is Java ability to deal with arbitrary pixel
+            > data access (numpy equivalent in Java-land).
+
+        -   Image-region would quickly follow
+
+        -   Core idea: downsampling upfront and store in Zarr. Then
+            > perform on-the-fly rendering on small images
+
+        -   Will: Sizes? Chris: Probably calculate all of them all the
+            > way down to 16x16. Seb: Just another resolution
+
+            -   Josh: and with ROIs on all of the resolutions as the
+                > cherry on the cake!
+
+        -   J-M: generation of downsampling will still need to happen
+
+        -   Mark: saving rendering setting on zarr as well?
+
+            -   J-M: show all rendering settings for a given user?
+                > Currently only the later.
+
+            -   Josh: idea of bookmarks. Stores a set of
+                > representations.
+
+    -   Jason: lots of use cases for significant number of ROIs
+
+        -   Might need to define boundaries as an answer to external
+            > requests
+
+    -   Josh: assuming no vetoes, take a ROI focused milestone. Look at
+        > dataset (upcoming + historical)
+
+        -   Some work around gallery in addition to specification?
+
+        -   Submitter’s regions? Touches the question of provenance
+
+            -   Some initial discussion about generated results
+
+            -   Jason: also examples generated from training.
+
+            -   J-M: ideally some tooling to combine ground truth with
+                > output of analysis
+
+            -   Simon: doable when data is on S3. Combine Zarr files
+                > from different locations. Effectively decentralized
+                > without going through OMERO..
+
+        -   Chris: forces to resolve question of defining the data
+            > sources. In favor of completely separating Image from ROI
+            > in NGFF in all cases.
+
+            -   If immutable, makes everything is easier to handle
+
+            -   Josh: brings other problems with it
+
+            -   Decision we will have to make early on. Not made in the
+                > case of OME-TIFF for instance where both
+                > representations are possible
+
+    -   Proposal: Glencoe focus on thumbnails + OSS focus on ROIs

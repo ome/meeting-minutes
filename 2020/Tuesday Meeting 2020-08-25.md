@@ -1,0 +1,183 @@
+Attending: Seb, Josh, Frances, June, J-m, Mark, David, Simon, Dom, Erin,
+Ola, Wilma, Andreas (=13)
+
+Chris, Jason, Kevin, Melissa, Will
+
+Start: 2:00 pm
+
+1. Accepting minutes from [<u>last meeting</u>](https://drive.google.com/open?id=0B9Xg53EhqUycZEVHclBwRHNFRGM)
+--------------------------------------------------------------------------------------------------------------
+
+2. Project Status
+-----------------
+
+(2-3 minutes each)
+
+-   IDR
+
+    -   Frances: working on next release with 2 new studies (0082, 0092)
+        > and HPA run8
+
+    -   HPA import is a bit slow, but hopefully can get it out \~Thurs.
+        > next week
+
+    -   JRS: seeing more submissions, and though many to BioStudies,
+        > more reference studies as well.
+
+-   NGFF (Josh)
+
+    -   Masks are now called labels
+
+    -   Multiscale labels led to a refactoring. (*Nearly* done, thanks
+        > to mypy) Feedback welcome.
+
+        -   Feedback welcome - API changes
+
+        -   OpenCV works nicely for downscaling - will be included in
+            > ome-zarr-py
+
+    -   Aim to use zarr labels for IDR submission Quant? QuPath Mask too
+        > large for Java!
+
+    -   Outstanding is the label metadata itself. Should be fairly
+        > straightforward to add.
+
+    -   [<u>Color discussion - JSON
+        > format</u>](https://github.com/ome/omero-ms-zarr/issues/62#issuecomment-676062914).
+
+    -   Next is to use the new structure for an IDR submission. May
+        > require synchronization with QuPath (+ export scripts)
+
+        -   Simon: idr0071 might be another use case. Small images/masks
+            > but large volume of them
+
+    -   Chris: recent paper on compression and impact on results
+
+        -   JRS: certainly in HCS. may be interesting to go back and
+            > review.
+
+        -   JAM: running multiple compressions
+
+        -   JRS: several HuBMAP candidates
+
+    -   Jason: what’s needed to move towards ‘release’
+
+    -   Josh: need to write up status on image.sc - but hard to stop
+        > adding stuff!
+
+        -   But, after multi-scale and API changes - ready to expose to
+            > community
+
+        -   Seb: can we share before we do lots of IDR testing?
+
+        -   Josh: needs some “real data” testing first, so we know it’s
+            > working
+
+        -   Jason: write 1k words and sent to Journal?
+
+        -   Josh: not on multi-scale labels etc until image.sc
+            > discussion & community feedback
+
+    -   Chris: maybe pick a partner for ‘early feedback’?
+
+        -   Josh: could do
+
+-   SA
+
+    -   Storage failure last week:
+
+        -   VMWare cluster lost physical disks, took out virtual disks.
+            > 2 DB gone
+
+        -   Postgres recovered quite well.
+
+        -   Demo segfault after restart
+
+        -   Nightshade OK.
+
+        -   Only lost 1 hour of transactions. Were snap-shotted 2hrs
+            > before
+
+        -   UoD data recovery worked well
+
+        -   Postgres is 9.6 - Upgrading to 11 (dump, upgrade, restore)
+
+        -   Simon: offline copy of nightshade mailing list would help
+
+            -   Pgdump deletes previous dump first (dumping to same
+                > folder)
+
+            -   Be careful with language. E.g. “catastrophic disk
+                > failure” sounds worse than it is.
+
+    -   Renewal of warranty for UoD IDR hardware - hard to get help from
+        > Dell
+
+        -   Simon & Jason going through \# of servers, etc.
+
+    -   LDAP failure
+
+        -   Older LDAP server - should be working again now
+
+        -   Need to migrate to newer LDAP server soon
+
+    -   SSL certificates
+
+        -   O.org certs - took less than a day this time ;)
+
+-   Glencoe - Chris
+
+    -   TileDB support in BioFormats2raw
+
+    -   Zarr inputs & outputs to work with CellProfiler and other tools
+
+    -   N5 repo - made comments
+
+    -   PR on TileDB stuff soon - working on metadata issues
+
+-   Community
+
+    -   FYI: Looking at omero-guides to sort out some search issues
+
+    -   Ola: using zarr and idr - napari to load images from backend.
+
+    -   Chris: Dockerhub to start throttling polls soon
+
+        -   Josh: largest concern is existing Images.
+
+3. AOB
+------
+
+(5 min. max; tech. Discussion should be highlighted to relevant people
+and rescheduled)
+
+4. Main Topic
+-------------
+
+(20-25 minutes plus 15 minutes questions max)
+
+-   Bio-formats options file
+
+    -   [<u>https://docs.google.com/presentation/d/1o9GYM9XGfsE4UIYrra25xfgtx85FESxtE6a-nHAO1F0/edit\#slide=id.g928e60de90\_0\_5</u>](https://docs.google.com/presentation/d/1o9GYM9XGfsE4UIYrra25xfgtx85FESxtE6a-nHAO1F0/edit#slide=id.g928e60de90_0_5)
+
+    -   Alternate representations of the same data.
+
+    -   E.g. Missing HCS wells -&gt; blank planes OR ‘holes’ in plate?
+        > Both could be “right”
+
+    -   Options API in BF 5.3. Key-Value pairs to configure a concrete
+        > reader
+
+    -   Issue with persistence of options. How to configure for OMERO
+        > etc?
+
+        -   Propose INI-file of key-value pairs linked to fileset via
+            > naming convention
+
+    -   API questions: naming/linking convention?
+
+    -   Simon: s3 - store authentication in INI files?
+
+        -   E.g. different bucket has different credentials
+
+    -   Seb: targeting 6.6

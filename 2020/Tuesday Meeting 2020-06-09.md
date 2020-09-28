@@ -1,0 +1,213 @@
+Attending: Dom, Seb, June, Petr, Frances, Mark, Melissa, Will, Josh,
+Wilma, Andreas, Jason, Jean-Marie, Chris
+
+Start: 2:00 pm
+
+1. Accepting minutes from [<u>last meeting</u>](https://drive.google.com/open?id=0B9Xg53EhqUycZEVHclBwRHNFRGM)
+--------------------------------------------------------------------------------------------------------------
+
+N/A
+
+2. Project Status
+-----------------
+
+(2-3 minutes each)
+
+-   IDR
+
+    -   Frances: good. Working on next release (3 datasets in testing).
+
+        -   Josh: should be first release back on EBI Embassy
+
+-   SA (learning/mail)
+
+    -   Mark: Google Groups looking promising, offering archiving and
+        > moderation.
+
+        -   Can subscribe users without them receiving mail, useful to
+            > let automated systems submit notifications to list.
+
+        -   Can coax subscription lists out of necromancer's Mailman by
+            > unpickling list config and can bulk-subscribe in Google.
+
+        -   Can fake list submissions without needing MX record
+            > switched.
+
+        -   Any final objections?
+
+        -   Seb: migration timelines and any need for testing?
+
+            -   Mark: still polishing the expected migration plan, get
+                > procedure in place then circulate for feedback. Some
+                > list specificities need to be accounted for
+
+            -   Have other people joining for testing might come next
+
+-   Glencoe
+
+    -   Chris: bioformats2raw and raw2ometiff issues. Might need to
+        > write tutorials next.
+
+        -   Josh: material available. Question is where does it live
+            > given both repositories.
+
+        -   Chris: considering single external location.
+
+        -   J-M: NGFF workshop guide migration? Josh: primarily waiting
+            > on the renaming.
+
+        -   J-M: also more and more material specific to IDR
+
+-   Community
+
+    -   Jason: Community Survey went out yesterday. Responses largely
+        > positive. Appreciative of the work. Lots of feedback. Do not
+        > edit!
+
+        -   Remote aspect of the meeting was very much appreciated
+
+        -   Looking forward to the future (still to be defined)
+
+        -   Missing in-person discussion
+
+    -   Grant reviews available. Overall positive and acknowledging
+        > great work.
+
+3. AOB
+------
+
+(5 min. max; tech. Discussion should be highlighted to relevant people
+and rescheduled)
+
+1.  Dundee ongoing WFH arrangements.
+
+    1.  
+
+4. Main Topic
+-------------
+
+(20-25 minutes plus 15 minutes questions max)
+
+-   Jason: points to more general directions.
+
+    -   Good response to new data vessels & workflows.
+
+    -   Opportunities to bring this forward e.g. import
+
+    -   Also metadata for correlative imaging, storing ROIs etc
+
+    -   Moving into Summer with decreased team velocity (annual leave)
+
+    -   Continue the trajectory of NGFF started in April. Metadata
+        > specifications
+
+-   Josh e.g. what if ROIs are no longer in the DB? How does that affect
+    > our APIs like the iviewer issue above
+
+    -   Start from IDR datasets, store ROIs in Zarr and use this define
+        > new APIs
+
+    -   J-M: also applies to results generated for an image e.g. Ilastik
+        > probability maps
+
+-   Jason: IDR datasets are great use cases for exercising these
+    > directions
+
+    -   Could we get all behind getting data imported in IDR? Distribute
+        > datasets?
+
+    -   E.g. idr0081 (adenovirus) has lots of interesting metadata that
+        > could be used e.g. for parade
+
+-   J-M: feedback from workshop also pointed towards making short videos
+    > available (&lt;20min)
+
+    -   Jason: appreciation of video content for the meeting (despite
+        > timing & accessibility issues)
+
+-   Josh: discuss IDR datasets post standup? Similar process to what
+    > happened while discussing the conversion of 7 specific images
+    > ahead of the meeting
+
+    -   Possible topics: rendering, acquisition, plate, ROIs,
+
+-   Will: Follow-up discussion on linking to ROIs in iviewer
+    > [<u>https://github.com/ome/omero-iviewer/issues/308</u>](https://github.com/ome/omero-iviewer/issues/308)
+
+    -   For single-shape ROI use case, open the image, left-hand panel
+        > does not change (full image thumbnails, images in dataset
+        > and/or well)
+
+    -   How to construct the query with other parameters
+
+        -   Generally scalability problem with creating a URL after
+            > selecting N ROIs
+
+        -   Jean-Marie: question of sharing the same view e.g.
+            > resolution level
+
+        -   Jason: are ROIs transmitted when clicking on viewport
+            > settings?
+
+        -   Josh: example of COVID datasets (single ROIs for each
+            > figure).
+
+        -   Chris: similar exposure with Pathviewer. Quickly get into
+            > weeds when replicating what’s in the UI esp. When
+            > considering active/inactive
+
+        -   For single ROI case, capturing viewport is a good
+            > workaround. Does not solve the bigger issue
+
+        -   In pathviewer either show viewport or link to ROI and do not
+            > allow configuration
+
+        -   Will: main thing remaining is the control of the Zoom. Seb:
+            > expand zoom level using bounding box of the ROI
+
+    -   Multiple ROIs?
+
+        -   Chris: do not allow unless you are ready to explain why some
+            > of them are not showed
+
+        -   Current implementation with multiple ROIs queries all images
+            > associated with each ROI and displays them in the
+            > left-hand panel
+
+        -   J-M: issue of creating duplicate thumbnails
+
+        -   Jason: would not break thumbnail/image paradigm in left-hand
+            > panel
+
+        -   If multiple ROIs are part of the same image, this loses the
+            > ability to see all the selected ROIs at once
+
+        -   Petr: cf feedback from EDI workshop with similar requests,
+            > interested in group of ROIs. Chris: built Pathviewer grid
+            > with that use case in mind, took &gt; 1 year. Very hard to
+            > build generic solutions that are application-agnostic
+
+        -   Jason: not even thinking how this would scale in the HCS
+            > domain
+
+    -   Seb: might need to solve 1 ROI/N shape problem
+
+        -   Josh: do it iteratively, i.e. get rois=xxx first then
+            > shapes==xxx
+
+        -   Will: effectively the implementation is working on shapes at
+            > the moment
+
+        -   Chris: Support both URLs styles when selecting object
+
+        -   When selecting a ROI, return rois or shapes?
+
+    -   Petr: question of shape propagation through Z
+
+        -   Jason: important but separate question. People in need for
+            > this functionality.
+
+        -   Chris: concepts around multi-shaped ROIs very loosely
+            > defined.
+
+-   

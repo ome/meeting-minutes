@@ -1,0 +1,156 @@
+Dundee: Simon, Mark, Dom, Will, Petr, June, J-m
+
+Remote: Josh (notes), Ola, Frances, Andreas, David, Jason, Melissa,
+Liza, Emil, Chris
+
+Start: 2:00 pm
+
+1. Accepting minutes from [<u>last meeting</u>](https://drive.google.com/open?id=1TndXeC3wQSZVEaB5ZGpEAaPRl1QAufSI)
+-------------------------------------------------------------------------------------------------------------------
+
+-   ok
+
+2. Project Status
+-----------------
+
+(2-3 minutes each)
+
+-   IDR (Frances)
+
+    -   HPA7 is good to go. idr0075 (honeybee) has been imported to
+        > idr-next.
+
+        -   Annotations next.
+
+        -   Release next week.
+
+    -   Downtime (Embassy migration)
+
+        -   VMs got set up last week. (Focusing on Python 3)
+
+        -   Currently hardware level issues. Needs debugging.
+
+        -   JRS: 3 weeks until downtime? Deadline? End of the month
+            > (**if** prod73 goes out)
+
+        -   Rsync’ing is the biggest risk.
+
+    -   EBI/IDR calls
+
+        -   \~30K GBP for training (travel fellowships, etc.)
+
+        -   Starting discussions on Friday.
+
+        -   GBI likely to be funded as a project and for training.
+
+        -   J-m: previously had worked on an IDR specific training. Know
+            > some directions.
+
+        -   EBI facilities are booked a year in advance
+
+        -   Chris: cf. PathLake’s 5-day master class on ML, etc.  
+            > [<u>https://warwick.ac.uk/fac/cross\_fac/pathlake/events/pathlake\_masterclass\_data</u>](https://warwick.ac.uk/fac/cross_fac/pathlake/events/pathlake_masterclass_data)
+
+            -   JRS: “working with labelled data”? Yeah.
+
+            -   Question of the hardware.
+
+                -   Involving vendors? (Intel/Nvidia) Bring own gear,
+                    > etc.
+
+            -   Ola: try google colab notebook (there are GPU)?
+
+-   Python3 (Josh / 14:14)
+
+    -   PyPI releases went out Friday/yesterday; few issues.
+
+    -   Going over [<u>release
+        > board</u>](https://trello.com/c/aTc8vsvK/24-review-the-board-and-close-it);
+        > downloads & docs not yet public.
+
+    -   Announcing downtime for Thursday morning
+
+        -   learning upgade Wednesday
+
+        -   Demo can happen tomorrow (no downtime needed)
+
+    -   Chris: various PRs coming once 5.6.0 is out.
+
+    -   Shipping with B-F 6.3.1
+
+    -   Various devspace work looming
+
+-   SA (learning/mail) - N/A
+
+    -   Simon: mail epic still needs thinking about
+
+-   Glencoe (Chris / 14:25)
+
+    -   Getting 5.6.0 testing environment set.
+
+        -   Moving OMERO plus to Python 3 ASAP (end of month or into
+            > Feb. if necessary)
+
+        -   Sync’ing Java, PG, etc. versions as well.
+
+    -   Moved customers off of OSS QA to GS QA.
+
+    -   Warning: python2+centos7+https is wonky.
+
+        -   Had to move urllib infrastructure to requests
+
+        -   To be validated in Python 3
+
+    -   PRs for new file formats this/next week.
+
+        -   Sample data that can be shared (\~50%)
+
+        -   JPEG-XR work is moving into bsd infrastructure.
+
+        -   Might be slightly tricky. Cleans up licensing.
+
+-   Community - 14:32
+
+    -   J-m: Workshop in Montpellier in 2 weeks (on 5.6.0 !)
+
+    -   JRS: users meeting announced. TBD.
+
+        -   Day 1 standard. Day 2+3 flexible.
+
+        -   Feedback from trainings about what to include.
+
+        -   … need to nail it down in Feb.
+
+    -   JRS: Code of Conduct
+
+        -   OSS and/or UoD
+
+        -   Enforcement is a question
+
+        -   Public comments & funding agencies
+
+    -   Promotional screens (stats)
+
+        -   *Outside* the fishbowl?
+
+    -   Wellcome visit
+
+        -   Dom, Mark, Simon - \~15min visitor schedule on the 29th.
+
+    -   Virginie Uhlmann’s seminar
+
+        -   IDR discussions in the afternoon.
+
+        -   Should be on the calendar.
+
+        -   Zoom call, Meeting room.
+
+3. AOB
+------
+
+(5 min. max; tech. Discussion should be highlighted to relevant people
+and rescheduled)
+
+-   Stephanie TIM 2020 workshop re: mobile internet (procurement)
+
+Done: 14:52

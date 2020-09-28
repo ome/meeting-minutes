@@ -1,0 +1,147 @@
+Attending: Frances, Josh, Petr, Mark, David, Melissa, Jason, Simon,
+June, J-m, Wilma, Andreas,
+
+Kevin, Will (notes), Seb, Chris
+
+Start: 2:00 pm
+
+1. Accepting minutes from [<u>last meeting</u>](https://drive.google.com/open?id=0B9Xg53EhqUycZEVHclBwRHNFRGM)
+--------------------------------------------------------------------------------------------------------------
+
+2. Project Status
+-----------------
+
+(2-3 minutes each)
+
+-   IDR
+
+    -   Frances: prod86 going out tomorrow with 2 planned studies.
+
+    -   Covid dataset in next release hopefully
+
+-   NGFF
+
+    -   S3 & community interest (Josh)
+
+        -   Simon has setup minio proxy for ebi s3 to allow more
+            > flexible auth
+
+        -   Might be using ebi FIRE
+
+    -   omero-ms-zarr (Mark)
+
+        -   Mark: Current PR binary data for masks
+
+        -   [<u>https://github.com/ome/omero-ms-zarr/pull/60</u>](https://github.com/ome/omero-ms-zarr/pull/60)
+
+    -   Mark now moving on to deep copy instead.
+
+-   SA
+
+-   Glencoe (Chris):
+
+    -   N5 / n5-zarr PRs merged
+
+    -   Feedback on performance issues
+
+    -   Looking at Imglib2 for bioformats2raw, e.g. scaling etc.
+
+    -   Proposals for adding metadata for downsampling
+
+    -   Looking at tile\_db
+
+-   Community
+
+    -   Josh: community meetings
+
+        -   Also: Zulip - private messages make community harder
+
+            -   People aren’t comfortable ‘chatting’ on image.sc
+
+        -   How often do we want non OME-team to join Tuesday meetings?
+
+        -   Other projects are more open
+
+        -   Jason: larger discussions / topics, e.g. monthly meetings
+
+        -   Simon: e.g. jupyter project posts meeting agenda
+            > before/after
+
+        -   Simon: post more frequently on image.sc - eg. today’s
+            > meeting etc.
+
+            -   Often get a response on image.sc for releases etc.
+
+            -   Josh: use
+                > [<u>https://hackmd.io/</u>](https://hackmd.io/) for
+                > posting notes in markdown?
+
+    -   FYI: help.o.org now pointing to the guides
+
+        -   Jason: thanks to JM & Petr
+
+    -   FYI: [<u>NG Metadata
+        > Grant</u>](https://docs.google.com/document/d/1faDqt2-L3ePR2WjJlRoAWhvmQVS6KkjlQ1chVibPWs8/edit)
+        > funded. Mostly around metadata.
+
+        -   Diagrams in proposal helpful
+
+    -   … anything else?... OME masks have arrived! Will be sent out.
+
+    -   QA uploader (quasi-main topic):
+
+        -   Flash is dead
+
+        -   Riad updated the uploader with JavaScript uploader
+            > ([<u>https://fineuploader.com/</u>](https://fineuploader.com/))
+
+            -   Wasn’t possible to deploy it, migrate QA1 -&gt; QA2
+
+        -   Options:
+
+            -   Figure out the upgrade
+
+            -   Create new QA3
+
+            -   Use public s3 uploader (e.g. we have a dev minio
+                > already)
+
+            -   Mi
+
+            -   Ftp (currently we use Glencoe’s ftp for some users)
+
+                -   Create new one as for idr at ebi
+
+            -   Web uploader
+
+                -   Josh - update Riad’s work with s3 backend?
+
+        -   Submitting files from Insight would keep working as now
+
+        -   Simon: nicest for user is Riad’s UI, how hard is it for us
+            > to deploy?
+
+        -   Josh: s3 needs us to send users a token (similar to current
+            > private ftp workflow)
+
+        -   Summary - next 3-6 months
+
+            -   Look at using Riad’s code
+
+            -   Backed by s3
+
+            -   Then look at improving security
+
+        -   Riad’s code is runnable via docker, so easy to deploy
+            > current code
+
+3. AOB
+------
+
+(5 min. max; tech. Discussion should be highlighted to relevant people
+and rescheduled)
+
+4. Main Topic
+-------------
+
+(20-25 minutes plus 15 minutes questions max)

@@ -1,0 +1,131 @@
+Attending: Frances, Will, Josh, Dominik, Mark, Petr, Sebastien, June,
+Jason, Jean-Marie, Simon, Wilma, David, Melissa, Liza, Chris, Kevin,
+Andreas, Ola, Emil,
+
+Start: 2:00 pm
+
+1. Accepting minutes from [<u>last meeting</u>](https://drive.google.com/open?id=0B9Xg53EhqUycZEVHclBwRHNFRGM)
+--------------------------------------------------------------------------------------------------------------
+
+2. Project Status
+-----------------
+
+(2-3 minutes each)
+
+-   IDR: waiting for idr-next to be available again,
+
+    -   Releasing idr0064 next
+
+    -   However disks for our NFS haven’t been shipped yet!
+
+    -   Discuss - upload direct to production?
+
+    -   Seb: need to upgrade idr-contrib thread. (“big issue with
+        > storage”)
+
+-   IO:
+
+    -   See notes from this morning.
+
+    -   How to get all the parts together?
+
+    -   Break TODOs into chunks so we know who’s doing what?
+
+    -   Discuss on Thursday
+
+-   SA (learning/mail)
+
+    -   GPFS/VMWare: nothing new on pricing.
+
+    -   E-mail: Prioritizing migration in case necromancer dies
+
+        -   Looking into abilities of Google Suite
+
+        -   And using Outlook for any remaining items.
+
+    -   Upcoming questions about outstanding hosts.
+
+        -   Simon hopes to get rid of \~90% of them.
+
+-   Glencoe:
+
+    -   Looking at Bio-Formats to raw use-cases.
+
+    -   Test with HCS datasets
+
+    -   Isyntax -&gt; raw -&gt; OME-TIFF - fixing chunking issues
+
+        -   Small chunk sizes are expensive for large amounts of data
+
+        -   E.g. rgb as 3 chunks can be e.g 15% slower.
+
+        -   Josh: zarr PR fs-spec - Use UI to pick where to store stuff.
+
+        -   Might need tests to check output of n5, read by zarr etc.
+
+-   Community
+
+    -   Ola: imjoy integration
+        > ([<u>https://imjoy.io</u>](https://imjoy.io))
+
+        -   Javascript based image platform
+
+        -   Based on jupyter
+
+        -   Useful for machine learning (e.g. to build ground truth)
+
+        -   JRS: discussed several times. Nice application. Very
+            > powerful for demonstrating. Have looked into repositories
+            > for AI training.
+
+        -   Use case: primarily giving ground truths (ROIs) to users.
+            > Josh: other tools worth looking into are Ilastik or
+            > QuPath.
+
+            -   Chris: also some tooling for converting QuPath regions
+                > back into OMERO
+                > ([<u>https://github.com/glencoesoftware/ome-omero-roitool</u>](https://github.com/glencoesoftware/ome-omero-roitool))
+
+            -   J-M: existing integrations for Ilastik/QuPath
+
+                -   [<u>https://omero-guides.readthedocs.io/en/latest/</u>](https://omero-guides.readthedocs.io/en/latest/)
+
+    -   Funding Ops
+
+        -   EOSC-Life (9-12 months)
+
+        -   A few other EU projects….
+
+    -   Community Meeting
+
+        -   Amended virtual
+            > [<u>agenda</u>](https://docs.google.com/spreadsheets/d/125S_W1xovW8r7GAKxCX8e_0KwzTMqU7UqZh1Ty644k4/edit#gid=0)
+
+        -   Use recorded content except for Jason, JM & Keynote.
+
+        -   What to do with Videos? Speakers happy for them to be
+            > public? (youtube)? Hosting ourselves? (more work).
+
+        -   Workshops?
+
+        -   Seb: watch videos \*before\* meeting. Then discussion on the
+            > day?
+
+            -   Jason: yes. We will record the speakers.
+
+        -   (Trello Joy)
+
+        -   Zoom Joy
+
+            -   
+
+3. AOB
+------
+
+(5 min. max; tech. Discussion should be highlighted to relevant people
+and rescheduled)
+
+4. Main Topic
+-------------
+
+(20-25 minutes plus 15 minutes questions max)

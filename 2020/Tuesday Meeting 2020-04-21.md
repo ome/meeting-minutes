@@ -1,0 +1,141 @@
+Attending: Petr, Josh, J-m, Frances, Mark, June, David, Dom, Seb, Simon,
+Jason,
+
+Liza, Will, Melissa, Wilma, Chris, Emil, Andreas
+
+Start: 2:00 pm
+
+1. Accepting minutes from [<u>last meeting</u>](https://drive.google.com/open?id=0B9Xg53EhqUycZEVHclBwRHNFRGM)
+--------------------------------------------------------------------------------------------------------------
+
+2. Project Status
+-----------------
+
+(2-3 minutes each)
+
+-   IDR
+
+    -   Simon: Working on a second production deployment
+
+    -   If starts OK, will look at network swap
+
+-   IO: Josh:
+
+    -   Friday - plan to demo a set of IDR images being opened via
+        > napari from s3.
+
+    -   Zarr in minio: format, etc.
+
+    -   bioformats2raw: layouts, etc.
+
+    -   Need to keep various repos in sync as we evolve our new zarr
+        > format.
+
+    -   Seb: remember to record the demo.
+
+    -   JM: looking at images from idr0062 - 5D. Comparing metrics from
+        > opening with raw TIFFs with Pillow, zarr, h5 etc.
+
+    -   Will: demo napari running on remote machine?? Josh: follow-up
+        > after meeting
+
+-   SA (learning/mail)
+
+    -   We have a final GPFS quote
+
+    -   VMWare licenses still valid for 11 months
+
+    -   We need somewhere to document licenses and renewal dates
+        > (calendar….?)
+
+        -   Josh: previously
+            > [<u>https://trello.com/b/GdVexOBr/software-licensing-no-keys-please</u>](https://trello.com/b/GdVexOBr/software-licensing-no-keys-please)
+
+        -   Seb: need something with notifications
+
+-   Glencoe, Chris:
+
+    -   Bioformats2Raw progress
+
+        -   Issues with incomplete tiles/padding
+
+        -   Fixes and release unlikely in the short term
+
+        -   Will set up our own n5-zarr repo with SNAPSHOT builds
+
+        -   Bio-Formats fixes from 5.6.1 feedback
+
+-   Community
+
+    -   OME Mtg
+
+        -   om.org website updated
+
+        -   Latest draft
+            > [<u>agenda</u>](https://docs.google.com/spreadsheets/d/125S_W1xovW8r7GAKxCX8e_0KwzTMqU7UqZh1Ty644k4/edit#gid=0)
+
+        -   Speakers contacted re:video recordings
+
+        -   Trial run-- BioImagingUK mtg this week, breakouts next week
+
+        -   Deciding on video hosting soon.
+
+        -   This week: Schedule recording of talks
+
+        -   Today - test meeting
+
+        -   Strategy docs for breakout sessions
+
+        -   Workshops - prepare our own from training workshops
+
+            -   Also invite community, e.g. Glencoe and others
+
+-   IO Demo:
+
+    -   Remote desktop available? MyBinder with napari? VNC UI update
+        > choppy
+
+    -   What is goal of demo?
+
+    -   Want to get consistent measure of performance.
+
+    -   JM: can demo loading of zarr/zip/tar from file-ann on Image
+
+        -   Can’t load zip from minio
+
+    -   Simon: demo napari loading from minio.
+
+    -   Jason: we have Windows remote desktop available
+
+        -   But blosc etc not tested on Windows
+
+    -   Chris: who has best bandwidth connectivity?
+
+        -   Chris: I can run locally, if Will gives me instructions.
+
+        -   Can we run on Windows?
+
+    -   JM: which files to use - idr0062
+
+    -   Seb: idr0044 2k x 2k x 1k...etc.
+
+    -   Josh: converting using Docker running on server.
+
+    -   Will: Using nested chunks?
+
+    -   Josh: Seeing RecursionError when loading over s3.
+
+    -   Seb: maybe 1 million chunks in idr0044
+
+    -   Josh Image:3428066 - fails with nested OR un-nested chunks
+
+3. AOB
+------
+
+(5 min. max; tech. Discussion should be highlighted to relevant people
+and rescheduled)
+
+4. Main Topic
+-------------
+
+(20-25 minutes plus 15 minutes questions max)

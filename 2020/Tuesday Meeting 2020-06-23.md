@@ -1,0 +1,155 @@
+Attending: Josh, Will, Frances, Mark, Chris, Simon, Petr, Melissa,
+Sebastien, Wilma,
+
+> David, Dominik, Jason, Jean-Marie, Andreas, Emil,
+
+Start: 2:00 pm
+
+1. Accepting minutes from [<u>last meeting</u>](https://drive.google.com/open?id=0B9Xg53EhqUycZEVHclBwRHNFRGM)
+--------------------------------------------------------------------------------------------------------------
+
+2. Project Status
+-----------------
+
+(2-3 minutes each)
+
+-   IDR
+
+    -   Idr0071 needs more testing: Simon:
+
+        -   Imported to incorrect datasets due to
+            > [<u>https://github.com/ome/omero-blitz/issues/91</u>](https://github.com/ome/omero-blitz/issues/91)
+
+        -   32 images have excess metadata: Potential workaround
+
+        -   Duplicate Project/Dataset names causing issues
+
+        -   Plan to import then assess
+
+        -   Frances: plan was for prod84 (with idr0079, idr0077,
+            > idr0070)
+
+        -   Could release prod84 with those. Need to contact idr0071
+            > submitter
+
+        -   Simon - import during this week. Discuss options on Monday
+
+-   NGFF (Josh)
+
+    -   Notes from [<u>yesterday's
+        > meeting</u>](https://docs.google.com/document/d/1kCTxl9LpuDjDoF4hXayahbAkR8aM2IfTbXunOCE-tJc/edit#).
+
+        -   Goal is to have masks in ome-zarr, i.e. bottom portion of:
+
+        -   <img src="/tmp/tuesday-meetings/images/media/image1.png" style="width:3.34896in;height:1.55926in" />
+
+        -   Simon working on spec
+
+        -   Dundee team working on ‘bottom’ path above
+
+        -   GS working on ‘top’ path.
+
+        -   Omero-rois (python, OME team) used in IDR
+
+        -   Omero-roitool (Java, GS) uses existing Java libs
+
+    -   ITK
+        > [<u>inquiry</u>](https://github.com/Kitware/itk-vtk-viewer/issues/315)
+        > about location of spec to add support
+
+    -   From napari zulip,
+        > [<u>https://github.com/tlambert03/napari-omero</u>](https://github.com/tlambert03/napari-omero)
+
+        -   Good to support masks
+
+    -   Discussion with Erich Bremer - Stony Brook.
+
+        -   Mostly were discussing the intersection of RDF with binary
+            > data
+
+            -   See [<u>\[2005.06469\] Representing Whole Slide Cancer
+                > Image Features with Hilbert
+                > Curves</u>](https://arxiv.org/abs/2005.06469)
+
+            -   Spatially indexed representation of polygons to overlay
+                > on images
+
+            -   Done via a column store-like representation which could
+                > be used within Zarr.
+
+            -   … &gt; Pathology … &gt; … &gt; DICOM …
+
+        -   But: Was unclear on tile server feature. Upcoming
+            > publication of one (IIF-compatible) which could be
+            > submitted back. Also has an CECOG-like HTTP implementation
+            > for Bio-Formats.
+
+        -   Also, successfully using
+            > [<u>native-image</u>](https://www.graalvm.org/docs/reference-manual/native-image/)
+            > (from GraalVM) to compile Bio-Formats to native code.
+
+            -   Doesn’t support reflection - manual effort required
+
+        -   Awaiting publication etc.
+
+-   SA (learning/mail)
+
+    -   VMWare hypervisor and firmware updates
+
+        -   Rolling update of hypervisors, due to firmware updates will
+            > require VMs to be updated at our leisure (proposed
+            > timescale: over two week period following start of work by
+            > UoD IT)
+
+        -   Downtime needed. In touch with UoD IT.
+
+    -   Mail migration: Last week's testing passed, list migration
+        > underway this week.
+
+        -   In retiring ome-nitpick in favor of omero-team, add Andreas,
+            > Emil, Wilma to latter? Maybe Kevin? Happy to go with what
+            > works for Glencoe. Current omero-team members are Chris,
+            > Melissa, Stick.
+
+        -   Chris: will discuss with GS team
+
+-   Glencoe (Chris):
+
+    -   Bioformat2raw work on Plates and Memoizer
+
+    -   n5/zarr usage in Java investigation
+
+-   Community
+
+    -   Workshop videos? July?
+
+        -   JM: video recording? Quality? zoom vs OBS etc?
+
+        -   Jason: needs discussion later
+
+    -   Community meetings? More frequent meetings suggested.
+
+        -   Get some more work done first
+
+        -   September
+
+    -   Collaboration proposals
+
+    -   
+
+3. AOB
+------
+
+(5 min. max; tech. Discussion should be highlighted to relevant people
+and rescheduled)
+
+-   Office seating:
+
+    -   If desk is taped off, choose another
+
+    -   If you want to work in office, let Jason know.
+
+4. Main Topic
+-------------
+
+(20-25 minutes plus 15 minutes questions max)

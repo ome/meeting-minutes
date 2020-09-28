@@ -1,0 +1,108 @@
+Attending: Jason, Seb, mark, Frances, June, Liza, Simon, Dom, Melissa,
+Josh, David, Wilma, Petr,
+
+> Ola, Will, J-M, Chris
+
+Start: 1:00 pm
+
+1. Accepting minutes from [<u>last meeting</u>](https://drive.google.com/open?id=0B9Xg53EhqUycZEVHclBwRHNFRGM)
+--------------------------------------------------------------------------------------------------------------
+
+2. Project Status
+-----------------
+
+(2-3 minutes each)
+
+-   IDR
+
+    -   Frances: prod82 released with idr0081.
+
+    -   Josh: Multiple containers belonging to the same study shown in
+        > the “X Studies” sections of gallery
+
+    -   Simon: working on updated nginx logs
+
+-   SA (learning/mail)
+
+    -   Mark - still looking at mailing lists when time allows.
+        > Experimenting with interaction between Google Groups and UoD
+        > mailing lists.
+
+-   Glencoe (Chris):
+
+    -   Dealing with poorly formatted data - lots of usage by community
+
+    -   Seb: add warning to Bio-Formats?
+
+    -   Chris: yes, should exit instead of trying to handle it
+
+    -   5.6.1 upgrades ongoing
+
+    -   romio jars issues - want to be able to consume
+        > [<u>https://github.com/ome/omero-romio/pull/21/</u>](https://github.com/ome/omero-romio/pull/21/)
+
+    -   Just need to make a release.
+
+-   Community
+
+    -   Lots of registrations for the OME meeting. &gt; 225
+
+    -   Updates to website etc being pushed out
+
+    -   Speakers responding re: video recordings
+
+    -   Discussion templates.. Josh - format works.
+
+    -   How to handle large number of downloads of videos from OME site?
+
+    -   Jason: load shouldn’t be too high, spread across timezones.
+
+    -   Simon: upload to youtube ahead of time in case?
+
+    -   Frances/Seb talk progressing well
+
+    -   Seb: zoom settings for recordings - can post somewhere?
+
+    -   Workshops will be live (just talks are recorded)
+
+    -   JM: quick overview of workshops on Thurs
+
+    -   Petr: will need workshop leaders to handle zoom
+
+    -   Jason: need co-host to monitor raised hands & chat, flag
+        > questions, mute users etc.
+
+    -   Petr - hosts will need help. Will have 1 zoom link per workshop.
+        > E.g. figure. Re-used for repeat.
+
+    -   Jason - pick co-hosts and run-through instructions, either
+        > Thursday, Friday or Monday.
+
+    -   OME team - info in the next few days on registering for
+        > workshops etc.
+
+    -   Petr: need to be sure of your zoom account details/login.
+
+    -   Jason: need to use same e-mail as you used for meeting
+        > registration.
+
+    -   First 2 days - will receive single zoom link - everyone is just
+        > a participant
+
+    -   For workshops, you will be given permissions to start & host
+        > calls.
+
+    -   Seb: can we set the time to go over this?
+
+    -   Petr & Simon - today/Wed/Thurs. Others on Friday,
+
+3. AOB
+------
+
+(5 min. max; tech. Discussion should be highlighted to relevant people
+and rescheduled)
+
+4. Main Topic
+-------------
+
+(20-25 minutes plus 15 minutes questions max)

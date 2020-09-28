@@ -1,0 +1,95 @@
+Attending: Will, Josh, Sebastien, Simon, Jason, Jean-Marie, June, Wilma,
+Petr, Frances, Melissa, Dom, David, Chris, Andreas, Emil, Erin, Kevin,
+
+Start: 2:00 pm
+
+1. Accepting minutes from [<u>last meeting</u>](https://drive.google.com/open?id=0B9Xg53EhqUycZEVHclBwRHNFRGM)
+--------------------------------------------------------------------------------------------------------------
+
+2. Project Status
+-----------------
+
+(2-3 minutes each
+
+-   IDR:
+
+    -   Next release… 2 studies, idr0084 and idr0086 both in testing.
+
+        -   Release later this month
+
+        -   Simon: Seb’s been testing B-F release on idr-testing
+
+-   NGFF
+
+    -   Masks
+
+        -   A couple of discussions - notes available
+
+        -   4 PRs open in various repos. All working with agreement on
+            > format.
+
+        -   No multi-resolution work yet (mask pyramids).
+
+            -   Might be OK without downsampling for now
+
+        -   Mark back next week to implement latest in microservice
+
+        -   Groups. Other specs?
+
+        -   Timeline/Demo
+
+    -   NB: Ongoing python/bioformats [<u>twitter
+        > thread</u>](https://twitter.com/DrAnneCarpenter/status/1277981620969115649)
+
+        -   
+
+    -   \[Simon\] Restarted attempt to get [<u>Ice 3.6 all platforms
+        > into
+        > conda-forge</u>](https://github.com/conda-forge/zeroc-ice-feedstock/issues/3)
+
+-   GGlence:
+
+    -   Welcome Erin
+
+    -   Bio-Formats backports
+
+-   SA (learning/mail)
+
+    -   Mail migration has gone okay? Can now back up then turn off
+        > necromancer?
+
+        -   If it’s a full disk backup it should probably be encrypted,
+            > otherwise backup relevant directories
+
+    -   Seb: mbox -&gt; Google Group archiving workflow
+
+        -   Runs overnight and “it works” - low cost
+
+        -   Ome-users Done
+
+        -   Google groups more searchable
+
+        -   Jason: nit-pick and devel would be worth doing
+
+            -   Good record of 2 decades
+
+-   Community
+
+    -   Eosc training: J-M & Petr attended this am a zoom conf about
+        > remote training. Some usual tools/tips presented. TODO: go
+        > over some of the notes
+
+3. AOB
+------
+
+(5 min. max; tech. Discussion should be highlighted to relevant people
+and rescheduled)
+
+-   Release process started: BF 6.5.1 to get out first
+
+-   OME Team Funding and Contracts
+
+4. Main Topic
+-------------
+
+(20-25 minutes plus 15 minutes questions max)

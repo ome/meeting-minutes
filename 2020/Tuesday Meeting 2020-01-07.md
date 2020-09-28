@@ -1,0 +1,103 @@
+Dundee: Will, Petr, Dominik, Mark, June,
+
+Remote: Josh, Jason, Frances, Andreas, Emil, J-m, David, Liza, Ola
+
+Start: 2:00 pm
+
+1. Accepting minutes from [<u>last meeting</u>](https://drive.google.com/open?id=1TndXeC3wQSZVEaB5ZGpEAaPRl1QAufSI)
+-------------------------------------------------------------------------------------------------------------------
+
+2. Project Status
+-----------------
+
+(2-3 minutes each)
+
+-   IDR
+
+    -   Working on releasing prod73 before end of Jan
+
+        -   HPA run 7
+
+        -   Idr0075 - Honey bee
+
+-   Python3
+
+    -   M5 docs done yesterday
+
+    -   bin/omero removal -- This will take us to “phase 2” simplifying
+        > the release of omero-py fixes, but is a bit tricky at this
+        > stage and requires a doc review.
+
+        -   Ensures that users are NOT using lib/python shipped with
+            > server
+
+    -   App updates -- All Python libraries on PyPI are being pinned to
+        > Python 3 which *should* mean that users who have not upgraded
+        > to Python 3 will stay on the older versions as intended.
+
+    -   Ola pinged Balaji - install testing from docs etc
+
+    -   Feedback from docs please… Can re-release quickly, up to 1 per
+        > day
+
+        -   [<u>http://docs.openmicroscopy.org/omero/5.6</u>](http://docs.openmicroscopy.org/omero/5.6)
+            > !
+
+    -   Jason: next goal to update IDR to use OMERO 5.6, any issues?
+
+        -   Josh: use downtime to investigate any issues
+
+        -   Simon: should just work
+
+        -   Josh: yes, once ansible roles updated
+
+            -   Data ingest changes - need to update google doc. E.g.
+                > remove bin/omero
+
+    -   JM: Debian 10 and CentOS 8 still not working (can’t login - Open
+        > SSL issue on Debian)
+
+-   SA (learning/mail) - 14:10
+
+    -   Jason: GPFS Server Licenses?
+
+-   Glencoe
+
+    -   Finally have a working develop setup which we'll be working
+        > through over the coming days and trying to open some PRs
+        > against the decoupled repositories.
+
+    -   FYI, starting soon we'll be starting to redirect OMERO Plus and
+        > GS Bio-Formats away from
+        > [qa.openmicroscopy.org.uk](http://qa.openmicroscopy.org.uk/)
+        > for update checks and QA submissions.
+
+    -   New file format work PRs coming soon.
+
+    -   Testing of python3
+
+    -   Setup Glencoe QA to take customer feedback
+
+-   Community
+
+    -   Jason: May 26-28 proposed date for next OME users meeting in
+        > Dundee.
+
+        -   Any vetoes?
+
+    -   Petr: 17th January EastBio 1.5 hour slot for OMERO.
+
+        -   Could use python-2 server if not time to set-up OMERO 5.6.
+
+3. AOB
+------
+
+(5 min. max; tech. Discussion should be highlighted to relevant people
+and rescheduled)
+
+-   Project performance and promotion - display usage stats etc.
+
+4. Main Topic
+-------------
+
+(20-25 minutes plus 15 minutes questions max)
