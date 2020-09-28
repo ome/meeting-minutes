@@ -1,9 +1,11 @@
+[![hackmd-github-sync-badge](https://hackmd.io/0x5SPIc2RnCMD0Bh0g-s6g/badge)](https://hackmd.io/0x5SPIc2RnCMD0Bh0g-s6g)
+
 Attending:
 
 Start: 2:00 pm
 
-1. Accepting minutes from [<u>last meeting</u>](https://drive.google.com/open?id=0B9Xg53EhqUycZEVHclBwRHNFRGM)
---------------------------------------------------------------------------------------------------------------
+1. Accepting minutes from [<u>last meeting</u>](https://github.com/joshmoore/meeting-minutes)
+---------------------------------------------------------------------------------------------
 
 2. Project Status
 -----------------
@@ -32,3 +34,9 @@ and rescheduled)
 -------------
 
 (20-25 minutes plus 15 minutes questions max)
+
+------
+
+At the end of the meeting:
+- Copy the contents of this document to a new file in https://github.com/joshmoore/meeting-minutes
+- Clear out the Agenda from last meeting
