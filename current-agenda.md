@@ -1,3 +1,7 @@
+---
+title: Agenda template
+---
+
 [![hackmd-github-sync-badge](https://hackmd.io/FERMkKbXTsO0tzRD3PSjLg/badge)](https://hackmd.io/FERMkKbXTsO0tzRD3PSjLg)
 
 Attending:
