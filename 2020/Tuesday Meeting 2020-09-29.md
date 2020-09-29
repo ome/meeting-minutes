@@ -2,6 +2,9 @@
 title: Tuesday meeting 2020-09-29
 ---
 
+[![hackmd-github-sync-badge](https://hackmd.io/vyMSnzwMTTmfKWEQkgS9gg/badge)](https://hackmd.io/vyMSnzwMTTmfKWEQkgS9gg)
+
+
 Attending:
 
 Start: 2:00 pm UK
