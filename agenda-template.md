@@ -2,15 +2,13 @@
 title: Agenda template
 ---
 
-Attending:
+## Attending:
 
 Start: 2:00 pm UK
 
-1. Accepting minutes from [<u>last meeting</u>](https://github.com/ome/meeting-minutes)
----------------------------------------------------------------------------------------------
+## Accepting minutes from [<u>last meeting</u>](https://github.com/ome/meeting-minutes)
 
-2. Project Status
------------------
+## Project Status
 
 (2-3 minutes each)
 
@@ -26,13 +24,10 @@ Start: 2:00 pm UK
 
 - Community
 
-3. AOB
-------
+## AOB
 
-(5 min. max; tech. Discussion should be highlighted to relevant people
-and rescheduled)
+(5 min. max; tech. Discussion should be highlighted to relevant people and rescheduled)
 
-4. Main Topic
--------------
+## Main Topic
 
 (20-25 minutes plus 15 minutes questions max)
