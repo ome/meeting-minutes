@@ -2,8 +2,6 @@
 title: Agenda template
 ---
 
-[![hackmd-github-sync-badge](https://hackmd.io/FERMkKbXTsO0tzRD3PSjLg/badge)](https://hackmd.io/FERMkKbXTsO0tzRD3PSjLg)
-
 Attending:
 
 Start: 2:00 pm UK
@@ -16,17 +14,17 @@ Start: 2:00 pm UK
 
 (2-3 minutes each)
 
--   IDR
+- IDR
 
--   NGFF
+- NGFF
 
--   OMERO 5
+- OMERO 5
 
--   SA
+- SA
 
--   Glencoe
+- Glencoe
 
--   Community
+- Community
 
 3. AOB
 ------
@@ -38,9 +36,3 @@ and rescheduled)
 -------------
 
 (20-25 minutes plus 15 minutes questions max)
-
-------
-
-At the end of the meeting:
-- Copy the contents of this document to a new file in https://github.com/ome/meeting-minutes
-- Clear out the Agenda from last meeting
