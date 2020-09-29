@@ -2,7 +2,7 @@
 
 Attending:
 
-Start: 2:00 pm
+Start: 2:00 pm UK
 
 1. Accepting minutes from [<u>last meeting</u>](https://github.com/ome/meeting-minutes)
 ---------------------------------------------------------------------------------------------
