@@ -1,4 +1,5 @@
 ---
+tags: Tuesday
 title: Agenda template
 ---
 
