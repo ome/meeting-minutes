@@ -1,7 +1,8 @@
 ---
 tags: Tuesday
-title: Agenda template
 ---
+
+# Agenda template
 
 ## Attending:
 
