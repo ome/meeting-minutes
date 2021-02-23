@@ -18,9 +18,7 @@ Start: 2:00 pm UK
 
 - NGFF
 
-- OMERO 5
-
-- SA
+- Releases
 
 - Glencoe
 
